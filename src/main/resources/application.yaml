@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: practice
+stripe:
+  apiUrl : https://api.Stripe.com
+  apiKey : 6969
+  enabled : true
+  timeout : 1000
+  supported-currency : USD, EUR
