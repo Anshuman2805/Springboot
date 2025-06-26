@@ -1,8 +1,11 @@
 package com.example.practice;
 
 public class OrderService {
+    private PayementService paymentService;
+    public OrderService(PayementService paymentService) {
+        this.paymentService = paymentService;
+    }
     public void placeOrder(){
-        var paymentService = new StripePayementService();
         paymentService.processPayment(100);
     }
 }
