@@ -10,6 +10,7 @@ public class OrderService {
     private PayementService paymentService;
     @Autowired
     public OrderService(PayementService paymentService) {
+        System.out.println("OrderService constructor");
         this.paymentService = paymentService;
     }
     public void placeOrder(){

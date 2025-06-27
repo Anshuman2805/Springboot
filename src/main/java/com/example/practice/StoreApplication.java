@@ -12,10 +12,10 @@ public class StoreApplication {
 
         ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
         var orderService = context.getBean(OrderService.class);
+        var orderService2 = context.getBean(OrderService.class);
+        var heavyResource = context.getBean(HeavyResource.class);
         orderService.placeOrder();
 
-//        var manager = context.getBean(NotificationManager.class);
-//        manager.sendNotification("This is test");
     }
 
 }
