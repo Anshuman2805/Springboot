@@ -11,10 +11,10 @@ public class StoreApplication {
     public static void main(String[] args) {
 
         ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
-        var orderService = context.getBean(OrderService.class);
-        var orderService2 = context.getBean(OrderService.class);
-        var heavyResource = context.getBean(HeavyResource.class);
-        orderService.placeOrder();
+
+        var userService = context.getBean(UserService.class);
+        userService.registerUser(new User(1L, "anshu280504@gmail.com", "12477", "Anshuman"));
+        //userService.registerUser(new User(1L, "anshu280504@gmail.com", "12477", "Anshuman"));
 
     }
 
