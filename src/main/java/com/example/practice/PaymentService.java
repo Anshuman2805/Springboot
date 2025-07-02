@@ -1,5 +1,5 @@
 package com.example.practice;
 
-public interface PayementService {
+public interface PaymentService {
     void processPayment(double amount);
 }

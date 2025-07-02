@@ -1,13 +1,17 @@
 spring:
   application:
     name: practice
+  datasource:
+    url : jdbc:mysql://localhost:3306/store?createDatabaseIfNotExist=true
+    username: root
+    password: 280504
 stripe:
   apiUrl : https://api.Stripe.com
   apiKey : 6969
   enabled : true
   timeout : 1000
   supported-currency : USD, EUR
-payment-gateway : paypal
+payment-gateway : stripe
 mail:
   host : https://stmp.gmail.com
   port : 5761

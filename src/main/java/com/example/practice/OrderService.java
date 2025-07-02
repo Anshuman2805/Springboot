@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-//@Service
+@Service
 public class OrderService {
-    private PayementService paymentService;
+    private final PaymentService paymentService;
     @Autowired
-    public OrderService(PayementService paymentService) {
+    public OrderService(@Qualifier("paypal") PaymentService paymentService) {
         System.out.println("OrderService constructor");
         this.paymentService = paymentService;
     }

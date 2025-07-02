@@ -11,17 +11,17 @@ public class AppConfig {
     private String paymentGateway;
 
     @Bean
-    public PayementService stripe(){
-        return new StripePayementService();
+    public PaymentService stripe(){
+        return new StripePaymentService();
     }
     @Bean
-    public PayementService paypal(){
+    public PaymentService paypal(){
         return new PayPalPaymentService();
     }
 
     @Bean
 //    @Scope("singleton") ---Default
-    @Scope("prototype")
+  //  @Scope("prototype")
     public OrderService orderService(){
         if(paymentGateway.equals("stripe")) {
             return new OrderService(stripe());
